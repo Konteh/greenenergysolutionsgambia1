@@ -4,29 +4,54 @@ import { Linkedin, Mail } from "lucide-react";
 export function Team() {
   const teamMembers = [
     {
-      name: "Chief Engineer",
-      role: "Lead Solar Engineer",
-      image: "images/ceo1.jpg",
+      name: "Assan Sowe",
+      role: "Co Founder & Director of Finance",
+      image: "images/teams/ceo1.jpg",
       description: "Over 12 years of experience in solar energy systems and electrical engineering"
     },
     {
-      name: "Pa Assan Jallow",
-      role: "Operations Director",
-      image: "images/ceo1.jpg",
+      name: "Cherno Sowe",
+      role: "Co Founder & Director of Technical Department",
+      image: "images/teams/cherno.jpg",
       description: "Specializes in project coordination and client relations across West Africa"
     },
     {
-      name: "Installation Specialist",
-      role: "Senior Technician",
-      image: "https://images.unsplash.com/photo-1688240817677-d28b8e232dd4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwdGVjaG5pY2lhbiUyMHdvcmtlcnxlbnwxfHx8fDE3NjM5ODI4NDl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      name: "Kaddy Darboe",
+      role: "Admin Officer",
+      image: "images/teams/kaddy.jpg",
       description: "Expert in solar panel installation and water pumping systems"
     },
     {
-      name: "Electrical Contractor",
-      role: "Licensed Electrician",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjM5NDg4NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      name: "Alieu Kandeh",
+      role: "Sale Person",
+      image: "images/teams/alieu.jpg",
       description: "Certified electrical contractor with extensive commercial experience"
-    }
+    },
+    {
+      name: "Muhammed Makalo",
+      role: "Lead Technician",
+      image: "images/teams/makalo.jpg",
+      description: "Certified electrical contractor with extensive commercial experience"
+    },
+    {
+      name: "Halima Jallow",
+      role: "Technician",
+      image: "images/teams/halima.jpg",
+      description: "Certified electrical technician with expertise in solar installations"
+    },
+    {
+      name: "Dawda Jallow",
+      role: "Technician",
+      image: "images/teams/dawda.jpg",
+      description: "Certified electrical technician with expertise in solar installations"
+    },
+    
+    {
+      name: "Momodou Marra",
+      role: "Technician",
+      image: "images/teams/marra.jpg",
+      description: "Certified electrical contractor with extensive commercial experience"
+    },
   ];
 
   return (

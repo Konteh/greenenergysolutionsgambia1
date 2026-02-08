@@ -23,7 +23,7 @@ export function Services() {
       description: "Expert electrical project planning, design, and implementation services tailored to your requirements."
     },
     {
-      image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxib3JlaG9sZSUyMGRyaWxsaW5nfGVufDF8fHx8MTc2OTQ3MDU0OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "images/borehole.jpeg",
       title: "Borehole Drilling",
       description: "Professional borehole drilling services with solar-powered water pumping installations for sustainable water access."
     },

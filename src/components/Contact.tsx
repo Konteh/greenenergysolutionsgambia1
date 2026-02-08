@@ -1,6 +1,7 @@
 import { MapPin, Phone, Mail, Facebook, Send } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useState } from "react";
+import { send } from "@emailjs/browser";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -10,11 +11,40 @@ export function Contact() {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, this would send the data to a backend
-    alert("Thank you for your message! We will get back to you soon.");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string;
+
+    if (!serviceId || !templateId || !publicKey) {
+      alert(
+        "EmailJS is not configured. Please set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID and VITE_EMAILJS_PUBLIC_KEY in your .env"
+      );
+      return;
+    }
+
+    setSending(true);
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+    };
+
+    try {
+      await send(serviceId, templateId, templateParams, publicKey);
+      alert("Thank you for your message! We will get back to you soon.");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      alert("Sorry, something went wrong sending your message. Please try again later.");
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -93,7 +123,7 @@ export function Contact() {
 
             <div className="relative h-64 rounded-lg overflow-hidden">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1751486289945-989724789188?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpY2FsJTIwZW5naW5lZXJpbmclMjB3b3JrfGVufDF8fHx8MTc2Mzk4MjIxM3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="images/hero3.jpg"
                 alt="Electrical engineering work"
                 className="w-full h-full object-cover"
               />
@@ -168,10 +198,11 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors flex items-center justify-center gap-2"
+                disabled={sending}
+                className={`w-full bg-green-600 text-white py-3 rounded-lg transition-colors flex items-center justify-center gap-2 ${sending ? 'opacity-70 cursor-not-allowed hover:bg-green-600' : 'hover:bg-green-700'}`}
               >
                 <Send className="h-5 w-5" />
-                Send Message
+                {sending ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>

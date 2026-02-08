@@ -8,7 +8,7 @@ export function Gallery() {
       // title: "Residential Solar Installation"
     },
     {
-     url: "images/img11.jpeg",
+     url: "images/tank3.jpeg",
       // title: "Residential Solar Installation"
     },
     {
@@ -28,7 +28,7 @@ export function Gallery() {
       title: "Electrical Panel Work"
     },
     {
-      url: "images/img321.jpg",
+      url: "images/tank1.jpeg",
       title: "Solar Water Pumping System"
     },
     {
@@ -36,7 +36,7 @@ export function Gallery() {
       title: "Community Solar Project"
     },
     {
-      url: "images/img44.jpeg",
+      url: "images/tank2.jpeg",
       title: "Community Solar Project"
     },
     // {
