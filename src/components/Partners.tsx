@@ -10,6 +10,7 @@ export function Partners() {
     { name: "Solar Energy Africa", imagePath: "images/partners/sebde.jpeg" },
     { name: "Solar Energy Africa", imagePath: "images/partners/behati.png" },
     { name: "Solar Energy Africa", imagePath: "images/partners/ports.jpg" },
+    { name: "Solar Energy Africa", imagePath: "images/partners/sino.png" },
     { name: "Solar Energy Africa", imagePath: "images/partners/nema.png" },
     { name: "Solar Energy Africa", imagePath: "images/partners/kg5.jpg" },
     { name: "Solar Energy Africa", imagePath: "images/partners/imf.jpeg" },
