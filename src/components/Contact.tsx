@@ -2,6 +2,7 @@ import { MapPin, Phone, Mail, Facebook, Send } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useState } from "react";
 import { send } from "@emailjs/browser";
+import { Toaster, toast } from "sonner";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -15,33 +16,68 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate form data
+    if (!formData.name.trim()) {
+      toast.error("Name Required", {
+        description: "Please enter your name.",
+        duration: 3000
+      });
+      return;
+    }
+    
+    if (!formData.email.trim()) {
+      toast.error("Email Required", {
+        description: "Please enter your email address.",
+        duration: 3000
+      });
+      return;
+    }
+    
+    if (!formData.message.trim()) {
+      toast.error("Message Required", {
+        description: "Please enter your message.",
+        duration: 3000
+      });
+      return;
+    }
+
     const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string;
 
     if (!serviceId || !templateId || !publicKey) {
-      alert(
-        "EmailJS is not configured. Please set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID and VITE_EMAILJS_PUBLIC_KEY in your .env"
-      );
+      toast.error("Configuration Error", {
+        description: "EmailJS is not configured. Please set VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID and VITE_EMAILJS_PUBLIC_KEY in your .env",
+        duration: 5000
+      });
       return;
     }
 
     setSending(true);
 
     const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      phone: formData.phone,
-      message: formData.message,
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      phone: formData.phone.trim(),
+      message: formData.message.trim(),
     };
+
+    console.log("Sending email with params:", templateParams);
 
     try {
       await send(serviceId, templateId, templateParams, publicKey);
-      alert("Thank you for your message! We will get back to you soon.");
+      toast.success("Message Sent!", {
+        description: "Thank you for your message! We will get back to you soon.",
+        duration: 4000
+      });
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (err) {
       console.error("EmailJS error:", err);
-      alert("Sorry, something went wrong sending your message. Please try again later.");
+      toast.error("Send Failed", {
+        description: "Sorry, something went wrong sending your message. Please try again later.",
+        duration: 5000
+      });
     } finally {
       setSending(false);
     }
@@ -56,6 +92,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-20 bg-white">
+      <Toaster position="top-center" richColors />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-green-600 mb-4">Get In Touch</h2>
@@ -145,7 +182,7 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
-                  placeholder="John Doe"
+                  placeholder="Fatou Touray"
                 />
               </div>
 
@@ -161,7 +198,7 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
-                  placeholder="john@example.com"
+                  placeholder="marketing@greenenergysolutions.com"
                 />
               </div>
 
@@ -176,7 +213,7 @@ export function Contact() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
-                  placeholder="+220 1234567"
+                  placeholder="+220 7656566"
                 />
               </div>
 
