@@ -6,12 +6,17 @@ export function Partners() {
 
   // Partner data with image paths - add your partner logos in the images folder
   const partners = [
-    { name: "Solar Energy Africa", imagePath: "images/kglogo.png" },
-    { name: "Solar Energy Africa", imagePath: "images/kglogo.png" },
-    { name: "Solar Energy Africa", imagePath: "images/kglogo.png" },
-    { name: "Solar Energy Africa", imagePath: "images/kglogo.png" },
-    { name: "Solar Energy Africa", imagePath: "images/kglogo.png" },
-    { name: "Solar Energy Africa", imagePath: "images/kglogo.png" },
+    { name: "Solar Energy Africa", imagePath: "images/partners/brusels.jpeg" },
+    { name: "Solar Energy Africa", imagePath: "images/partners/sebde.jpeg" },
+    { name: "Solar Energy Africa", imagePath: "images/partners/behati.png" },
+    { name: "Solar Energy Africa", imagePath: "images/partners/ports.jpg" },
+    { name: "Solar Energy Africa", imagePath: "images/partners/nema.png" },
+    { name: "Solar Energy Africa", imagePath: "images/partners/kg5.jpg" },
+    { name: "Solar Energy Africa", imagePath: "images/partners/imf.jpeg" },
+    { name: "Solar Energy Africa", imagePath: "images/partners/unique.png" },
+    { name: "Solar Energy Africa", imagePath: "images/partners/UNCDF.png" },
+    { name: "Solar Energy Africa", imagePath: "images/partners/Discoverytours.png" },
+    { name: "Solar Energy Africa", imagePath: "images/partners/adc.jpeg" },
     
   ];
 

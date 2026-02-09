@@ -7,9 +7,14 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="bg-green-600 p-2 rounded-lg">
+              {/* <div className="bg-green-600 p-2 rounded-lg">
                 <Zap className="h-5 w-5 text-white" />
-              </div>
+              </div> */}
+              <img 
+                src="/images/ges.png" 
+                alt="Green Energy Solutions Logo" 
+                style={{ height: "40px", width: "auto" }}
+              />
               <span className="text-white">Green Energy Solutions</span>
             </div>
             <p className="text-gray-400">
@@ -82,7 +87,8 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Green Energy Solutions. All rights reserved.</p>
+         
+          <a href="https://kontehgraphics.com"> <p>&copy; {new Date().getFullYear()} Konteh Graphics. All rights reserved.</p></a>
         </div>
       </div>
     </footer>
