@@ -6,25 +6,25 @@ export function Team() {
     {
       name: "Assan Sowe",
       role: "Co Founder & Director of Finance",
-      image: "images/teams/ceo1.jpg",
+      image: "images/teams/ceo2.jpg",
       description: "Over 12 years of experience in solar energy systems and electrical engineering"
     },
     {
       name: "Cherno Sowe",
       role: "Co Founder & Director of Technical Department",
-      image: "images/teams/cherno.jpg",
+      image: "images/teams/cherno2.jpg",
       description: "Specializes in project coordination and client relations across West Africa"
     },
     {
       name: "Kaddy Darboe",
       role: "Admin Officer",
-      image: "images/teams/kaddy.jpg",
+      image: "images/teams/kaddy2.jpg",
       description: "Expert in solar panel installation and water pumping systems"
     },
     {
       name: "Alieu Kandeh",
       role: "Sale Person",
-      image: "images/teams/alieu.jpg",
+      image: "images/teams/alieu2.jpg",
       description: "Certified electrical contractor with extensive commercial experience"
     },
     {

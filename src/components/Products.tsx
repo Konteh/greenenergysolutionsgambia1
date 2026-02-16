@@ -3,12 +3,12 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 export function Products() {
   const products = [
     {
-      image: "https://images.unsplash.com/photo-1724041875467-3576f20170dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2xhciUyMHBhbmVscyUyMHN5c3RlbXxlbnwxfHx8fDE3Njk0NzAyMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "images/products/solar-photovoltaic.jpeg",
       title: "Solar Photovoltaic (PV) Systems",
       description: "Complete solar electricity systems for residential and commercial use. High-efficiency panels with inverters and battery storage options."
     },
     {
-      image: "https://images.unsplash.com/photo-1561115867-be8460fbebfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2xhciUyMHdhdGVyJTIwcHVtcGluZ3xlbnwxfHx8fDE3NjM5ODIyMTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "images/products/solar-pump.jpeg",
       title: "Solar Water Pumping Systems",
       description: "Advanced solar-powered water pumping solutions for irrigation, borehole drilling, and clean drinking water supply."
     },
@@ -18,17 +18,17 @@ export function Products() {
       description: "Energy-efficient solar street lights with automatic sensors, perfect for roads, parking lots, and public spaces."
     },
     {
-      image: "https://images.unsplash.com/photo-1612367662740-5cb9170a0768?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2xhciUyMHdhdGVyJTIwaGVhdGVyfGVufDF8fHx8MTc2OTQ3MDIwN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "images/products/solar-water.jpeg",
       title: "Solar Water Heaters",
       description: "Eco-friendly solar water heating systems for residential and commercial applications, reducing energy costs."
     },
     {
-      image: "https://images.unsplash.com/photo-1668097613572-40b7c11c8727?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2xhciUyMHBhbmVscyUyMGluc3RhbGxhdGlvbnxlbnwxfHx8fDE3NjM5Nzg4OTd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "images/products/solar-products.jpeg",
       title: "Solar Products & Equipment",
       description: "High-quality solar panels, inverters, batteries, charge controllers, and accessories from trusted manufacturers."
     },
     {
-      image: "https://images.unsplash.com/photo-1626251376234-8bc112f0bcd5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2xhciUyMHBhbmVscyUyMGZpZWxkfGVufDF8fHx8MTc2Mzk1MDY2N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "images/products/solar-hybrid.jpeg",
       title: "Solar Hybrid Systems",
       description: "Combined solar-grid systems with automatic switching, ensuring uninterrupted power supply for critical operations."
     }
