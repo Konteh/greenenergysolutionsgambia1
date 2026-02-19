@@ -28,7 +28,7 @@ export function Products() {
       description: "High-quality solar panels, inverters, batteries, charge controllers, and accessories from trusted manufacturers."
     },
     {
-      image: "images/products/solar-hybrid.jpeg",
+      image: "images/products/solar-hybrid1.jpeg",
       title: "Solar Hybrid Systems",
       description: "Combined solar-grid systems with automatic switching, ensuring uninterrupted power supply for critical operations."
     }
