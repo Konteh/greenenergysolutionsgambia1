@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Facebook, Send } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useState } from "react";
 import { send } from "@emailjs/browser";
@@ -119,14 +120,24 @@ export function Contact() {
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="bg-green-100 p-3 rounded-lg h-fit">
-                  <Phone className="h-6 w-6 text-green-600" />
+              <div className="space-y-4">
+                <div className="flex gap-4">
+                  <div className="bg-green-100 p-3 rounded-lg h-fit">
+                    <Phone className="h-6 w-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-gray-900 mb-1">Phone</h4>
+                    <p className="text-gray-600">+220 7656566</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-gray-900 mb-1">Phone</h4>
-                  <p className="text-gray-600">+220 7656566</p>
-                  <p className="text-gray-600">+220 7653364</p>
+                <div className="flex gap-4">
+                  <div className="bg-green-100 p-3 rounded-lg h-fit">
+                    <FaWhatsapp className="h-6 w-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h4 className="text-gray-900 mb-1">WhatsApp</h4>
+                    <p className="text-gray-600">+220 7653364</p>
+                  </div>
                 </div>
               </div>
 

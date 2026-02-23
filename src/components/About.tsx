@@ -34,7 +34,7 @@ export function About() {
               className="w-full h-[500px] object-cover rounded-lg shadow-xl"
             />
             <div className="absolute -bottom-6 -left-6 bg-green-600 text-white p-8 rounded-lg shadow-xl">
-              <div className="text-4xl mb-2">300+</div>
+              <div className="text-4xl mb-2">275+</div>
               <div className="text-sm">Projects Completed</div>
             </div>
           </div>
