@@ -127,7 +127,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="text-gray-900 mb-1">Phone</h4>
-                    <p className="text-gray-600">+220 7656566</p>
+                    <p className="text-gray-600">+220 7653364 </p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -136,7 +136,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="text-gray-900 mb-1">WhatsApp</h4>
-                    <p className="text-gray-600">+220 7653364</p>
+                    <p className="text-gray-600">+220 7656566</p>
                   </div>
                 </div>
               </div>
