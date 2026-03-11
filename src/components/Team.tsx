@@ -19,7 +19,7 @@ export function Team() {
       name: "Kaddy Darboe",
       role: "Admin Officer",
       image: "images/teams/kaddy2.jpg",
-      description: "Expert in solar panel installation and water pumping systems"
+      description: "Expert in administrative tasks related to solar energy projects and client support"
     },
     {
       name: "Alieu Kandeh",
